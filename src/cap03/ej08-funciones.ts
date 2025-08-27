@@ -21,7 +21,16 @@ saludar("Ana"); // Salida: Hola, Ana
 
 // Función con parámetros opcionales
 
+/**
+ * Función que retorna un saludo
+ * @param nombre Nombre de la persona (Obligatorio)
+ * @param apellido Apellido de la persona (Opcional)
+ * @returns Saludo
+ */
 function saludarConApellido(nombre: string, apellido?: string): string {
+  // Hay que controlar que apellido
+  // haya sido enviado, caso contrario
+  // tomará el valor de 'undefined'
   if (apellido) {
     return `Hola, ${nombre} ${apellido}`;
   } else {
@@ -32,16 +41,32 @@ function saludarConApellido(nombre: string, apellido?: string): string {
 console.log(saludarConApellido("Juan"));         // Salida: Hola, Juan
 console.log(saludarConApellido("Maria", "Pérez")); // Salida: Hola, Maria Pérez
 
-// Función con valores por defecto
 
+/**
+ * Función que retorna un saludo
+ * @param nombre Nombre de la persona (Obligatorio)
+ * @param ciudad Ciudad de la persona (Opcional)
+ * @returns Saludo
+ */
 function saludarConCiudad(nombre: string, ciudad: string = "Desconocida"): string {
+
+  // A pesar que la 'ciudad' es opcional
+  // no es necesario poner un control
+  // ya que tiene un valor por defecto
+  // Si no se envía ese parámetro entonces 
+  // tomará el valor por defecto.
   return `Hola, ${nombre} vives en ${ciudad}`;
 }
 
 console.log(saludarConCiudad("Carlos"));             // Salida: Hola, Carlos vives en Desconocida
 console.log(saludarConCiudad("Laura", "Barcelona")); // Salida: Hola, Laura vives en Barcelona
 
-
+/**
+ * Función que imprime un saludo
+ * No retorna ningún valor
+ * @param nombre Nombre de la persona
+ * @param ciudad Ciudad donde vive
+ */
 function imprimirSaludo(nombre: string, ciudad: string = "Desconocida"): void {
    console.log(`Hola, ${nombre} vives en ${ciudad}`);
 }
