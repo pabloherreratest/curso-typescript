@@ -7,3 +7,19 @@ limitado de valores, lo que mejora la seguridad y la legibilidad del código.
 Imagina que en lugar de decir "esto es una cadena de texto," dices 
 "esto es exactamente la cadena de texto 'rojo'."
 */
+
+let talla: string
+talla = 'ddsfadsfa fads'
+
+type TallaCamisa = 'small' | 'medium' | 'large'
+
+let miTalla1:TallaCamisa = 'small'
+miTalla1 = 'medium'
+// miTalla1 = 'extraLarge' // da error
+
+type Calificacion = 1 | 2 | 3 | 4 | 5
+
+let miCalificacion: Calificacion
+miCalificacion = 2
+// miCalificacion = 8 // da error
+
